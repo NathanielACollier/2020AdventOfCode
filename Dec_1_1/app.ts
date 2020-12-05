@@ -28,7 +28,7 @@ async function main(){
     });
 
 
-    let allCombinations = entries.map(n => entries.flatMap(n2 => [n, n2]));
+    let allCombinations = entries.flatMap(n => entries.map(n2 => [n, n2]));
     
     let winningRow = allCombinations
                                 .filter(r=> r[0] + r[1] == 2020)
